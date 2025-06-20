@@ -1,0 +1,187 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f7f7f7;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+.instrument-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 18px;
+  padding: 10px 4px 6px 4px;
+  background: linear-gradient(90deg, #ffe5ec 0%, #e0f7fa 100%);
+  border-bottom: 3px solid #ffb347;
+  flex-wrap: nowrap;
+  box-shadow: 0 2px 10px rgba(255, 183, 197, 0.08);
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ffb347 #ffe5ec;
+}
+
+.instrument-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+  padding: 8px 8px;
+  border-radius: 12px;
+  margin: 0 2px;
+  flex: 0 0 auto;
+}
+
+.instrument-group:nth-child(1) { background: #ff81a3; } /* Bongos - pink */
+.instrument-group:nth-child(2) { background: #e0f7fa; } /* Cymbal - blue */
+.instrument-group:nth-child(3) { background: #fff9c4; } /* Cowbell - yellow */
+.instrument-group:nth-child(4) { background: #e1bee7; } /* Meow - purple */
+.instrument-group:nth-child(5) { background: #c8e6c9; } /* Piano - green */
+
+.instrument-label {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 4px;
+  letter-spacing: 0.2px;
+  color: #444;
+  text-shadow: 0 1px 0 #fff;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.key-row {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.key-btn {
+  background: #fff;
+  color: #222;
+  border: 2px solid #bbb;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 1.05rem;
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+  margin: 0;
+  font-weight: 600;
+  transition: 
+    background 0.18s, 
+    color 0.18s, 
+    border-color 0.18s, 
+    box-shadow 0.18s;
+  min-width: 36px;
+}
+
+.instrument-group:nth-child(1) .key-btn { border-color: #ffb3c6; } /* Bongos */
+.instrument-group:nth-child(2) .key-btn { border-color: #4dd0e1; } /* Cymbal */
+.instrument-group:nth-child(3) .key-btn { border-color: #ffe082; } /* Cowbell */
+.instrument-group:nth-child(4) .key-btn { border-color: #ba68c8; } /* Meow */
+.instrument-group:nth-child(5) .key-btn { border-color: #81c784; } /* Piano */
+
+.key-btn:active, .key-btn.active {
+  background: #ffd700;
+  color: #fff;
+  border-color: #ff9800;
+  box-shadow: 0 2px 10px rgba(255, 152, 0, 0.18);
+}
+
+.cat-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 220px;
+  margin: 24px 0 20px 0;
+  position: relative;
+}
+
+.cat-area img {
+  width: 90vw;
+  max-width: 320px;
+  height: auto;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  border-radius: 18px;
+  background: #fffbe7;
+  box-shadow: 0 4px 16px rgba(255, 183, 197, 0.13);
+  border: 3px solid #ffe082;
+  display: block;
+}
+
+.cat-caption {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fffbe7;
+  color: #ff81a3;
+  font-weight: bold;
+  padding: 6px 18px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  /* box-shadow: 0 2px 8px rgba(255, 183, 197, 0.13); */
+  pointer-events: none; /* Allows clicks to pass through to the image */
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  font-size: 1rem;
+  color: #fff;
+  background: linear-gradient(90deg, #ffb347 0%, #ffcccb 100%);
+  padding: 12px 10px;
+  border-radius: 40px;
+  border: 2px solid #ff9800;
+  margin: 20px 8px 10px 8px;
+  box-shadow: 0 2px 12px rgba(255, 183, 197, 0.13);
+  text-align: center;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 700px) {
+  .instrument-bar {
+    gap: 6px;
+    padding: 6px 2px 4px 2px;
+    font-size: 0.95rem;
+  }
+  .instrument-group {
+    min-width: 60px;
+    padding: 6px 2px;
+  }
+  .instrument-label {
+    font-size: 0.85rem;
+  }
+  .key-btn {
+    font-size: 0.95rem;
+    padding: 7px 8px;
+    min-width: 28px;
+  }
+  .key-row {
+    gap: 4px;
+  }
+  .cat-area img {
+    max-width: 45vw;
+    border-radius: 12px;
+  }
+  footer {
+    font-size: 0.9rem;
+    gap: 10px;
+    column-gap: 8px;
+    padding: 5px 40px;
+    border-radius: 24px;
+    margin: 32px 2vw 8px 2vw;
+  }
+}
