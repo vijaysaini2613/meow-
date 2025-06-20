@@ -151,37 +151,51 @@ footer a {
 }
 
 /* Responsive styles for mobile */
-@media (max-width: 700px) {
-  .instrument-bar {
-    gap: 6px;
-    padding: 6px 2px 4px 2px;
-    font-size: 0.95rem;
+/* ===== Mobile tweaks (≤600 px) ===== */
+@media (max-width:600px){
+
+  body{padding:0 6px;}
+
+  h1{font-size:1.4rem;margin:8px 0;}
+
+  /* instrument bar wraps instead of scrolling */
+  .instrument-bar{
+    flex-wrap:wrap;          /* wrap rows */
+    overflow-x:hidden;       /* no horiz scroll */
+    gap:4px;
+    padding:6px 2px 4px;
   }
-  .instrument-group {
-    min-width: 60px;
-    padding: 6px 2px;
+
+  .instrument-group{
+    min-width:48px;          /* smaller tiles */
+    padding:6px 2px;
+    margin:2px 0;
   }
-  .instrument-label {
-    font-size: 0.85rem;
+
+  .instrument-label{font-size:0.8rem;}
+
+  /* keys */
+  .key-row{gap:4px;}
+  .key-btn{
+    padding:6px 10px;
+    font-size:0.9rem;
+    min-width:26px;
   }
-  .key-btn {
-    font-size: 0.95rem;
-    padding: 7px 8px;
-    min-width: 28px;
+
+  /* cat image */
+  .cat-area{margin:16px 0 12px;}
+  .cat-area img{
+    width:70vw;              /* fit screen */
+    max-width:260px;
+    border-radius:12px;
   }
-  .key-row {
-    gap: 4px;
-  }
-  .cat-area img {
-    max-width: 45vw;
-    border-radius: 12px;
-  }
-  footer {
-    font-size: 0.9rem;
-    gap: 10px;
-    column-gap: 8px;
-    padding: 5px 40px;
-    border-radius: 24px;
-    margin: 32px 2vw 8px 2vw;
+
+  /* footer */
+  footer{
+    font-size:0.8rem;
+    padding:8px;
+    margin:16px 4px 8px;
+    border-radius:24px;
+    gap:8px;
   }
 }
