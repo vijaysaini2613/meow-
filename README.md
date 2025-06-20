@@ -1,4 +1,5 @@
 # 🎵 Musical Meow 🐱
+![Image](https://github.com/user-attachments/assets/90170509-4ee2-42c5-b4ef-541aff841e50)
 
 A light and fun browser game made to relax your mind during boring office hours. Choose your instrument, and let the musical cat help you jam using your keyboard!
 
@@ -25,21 +26,37 @@ A light and fun browser game made to relax your mind during boring office hours.
 ## 📁 Folder Structure
 
 musical-meow/
+
 ├── index.html
+
 ├── style.css
+
 ├── script.js
+
 ├── cat_piano.jpg
+
 ├── cat_bongo.jpg
+
 ├── cat_cowbell.jpg
+
 ├── cat_cymbal.jpg
+
 └── sounds/
+
 ├── piano/
+
 │ ├── p1.mp3 ...
+
 ├── bongo/
+
 │ ├── b1.mp3 ...
+
 ├── cowbell/
+
 │ └── c1.mp3
+
 └── cymbal/
+
 └── cy1.mp3
 
 
